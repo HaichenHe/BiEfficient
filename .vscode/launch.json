@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/root/miniconda3/envs/hhc/lib/python3.9/site-packages/torch/distributed/run.py",
+            "console": "integratedTerminal",
+            // "console": "internalConsole" ,
+            // "justMyCode": false,
+            "args": [
+                "--nproc_per_node=1",
+                "--master_port=1236",
+                "train.py",
+                "--config",
+                "/root/autodl-fs/workspace/MyWork/BiEfficient/configs/k400/k400_train_vitb_16_f8.yaml",
+                // "--weights",
+                // "exps/k400/ViT-B/16/20240304_163956/model_best.pt"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            },
+        }
+    ]
+}
